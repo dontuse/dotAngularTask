@@ -1,0 +1,65 @@
+.harvester {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+
+
+  &__box-1 {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    font-size: 15px;
+    color: #585254;
+    font-style: italic;
+    font-family: Georgia;
+    padding-top: 47px;
+  }
+
+  &__box-2 {
+    flex-grow: 100;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  &__row-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__row-1:before {
+    content: '';
+    height: 1px;
+    background: #17191e;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+  }
+  
+  &__label {
+    font-size: 27px;
+  }
+
+  &__search {
+    background: white;
+    position: relative;
+    text-align: center;
+    width: 58%;
+  }
+
+  &__weight {
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  &__message {
+    font-size: 27px;
+    margin-bottom: 7px;
+  }
+
+  &__drop-box {
+    margin-bottom: -3px;
+  }
+}

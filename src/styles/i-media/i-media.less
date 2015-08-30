@@ -1,0 +1,55 @@
+
+
+@media (max-width: 800px) {
+  body {
+    align-content: flex-start;
+  }
+
+  .harvester {
+    flex-wrap: wrap;
+  }
+
+  .harvester__box-1 {
+    padding-top: 0;
+    line-height: 1;
+    font-size: 20px;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .harvester__search {
+    width: 100%;
+    padding: 0;
+  }
+
+  .fruit-grid__el {
+    width: 100%;
+  }
+
+  .fruit__name, .fruit__weight {
+    text-align: center;
+  }
+
+  .fruit__pic {
+    justify-content: center;
+    height: 200px;
+  }
+
+  .arrow {
+    top: 10%;
+    position: fixed;
+    font-size: 30px;
+
+    &_next {
+      right: 15px;
+    }
+
+    &_prev {
+      left: 15px;
+      transform: rotate(180deg);
+    }
+  }
+
+
+}

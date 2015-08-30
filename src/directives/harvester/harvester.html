@@ -1,0 +1,48 @@
+<div class="harvester" ng-class="mod">
+    <div class="harvester__box-1">Фрукты и овощи</div>
+    <div class="harvester__box-2">
+        <div class="harvester__row-1">
+            <div class="harvester__search">
+                <div class="harvester__drop-box">
+                    <label class="harvester__label">
+                        За
+                    </label>
+
+                    <div class="drop-down" ng-click="openDropDown($event)" ng-class="{open:dropDownIsOpen}">
+                        <div class="drop-down__selected">
+                            {{activeMonth.text}}
+                        </div>
+                        <div class="drop-down__list">
+                            <div ng-repeat="month in months | filter:{val: '!'+activeMonth.val} "
+                                 data-value="{{month.val}}"
+                                 ng-click="selectTime(month)"
+                                 class="drop-down__item">
+                                {{month.text}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="harvester__message">вы вырастили</div>
+                <div class="harvester__weight">{{totalWeight | spacedNumber}} т.</div>
+            </div>
+        </div>
+        <div class="fruit-grid">
+            <div ng-show="canPrev" ng-click="prev()" class="arrow arrow_prev">➔</div>
+
+            <div class="fruit-grid__fruits">
+                <div class="fruit fruit-grid__el zipper"
+                     ng-repeat="fruit in pFruits | limitTo: itemsPerPage">
+                    <div class="fruit__pic">
+                        <img class="fruit__img"
+                             style="max-width: {{fruit.relativeWeight}}%; max-height: {{fruit.relativeWeight}}%;"
+                             ng-src="public/{{fruit.img}}" alt=""/>
+                    </div>
+                    <div class="fruit__name">{{fruit.name}}</div>
+                    <div class="fruit__weight">{{fruit.weight | spacedNumber}} т.</div>
+                </div>
+            </div>
+
+            <div ng-show="canNext" ng-click="next()" class="arrow arrow_next">➔</div>
+        </div>
+    </div>
+</div>

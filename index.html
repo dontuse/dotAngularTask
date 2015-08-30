@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Овощи, фрукты, прочие продукты !</title>
+</head>
+<body>
+<div class="page" ng-controller="HarvesterController as hc">
+    <div class="page__wrap">
+        <harvester
+                mod="test-mix page__harvester"
+                filter="hc.filterByMonth"
+                fruits="hc.fruits"
+                total-weight="hc.totalWeight"
+                active-month = "hc.activeMonth"
+                months="hc.months">
+        </harvester>
+    </div>
+</div>
+</body>
+<script src="build/bundle.js"></script>
+</html>
